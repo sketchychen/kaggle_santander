@@ -8,6 +8,13 @@ Resources:
 
 Notes on the variables gleaned from the forums (because no data dictionary or any code book was provided!):
 - On the topic of variable meaning/significance: https://www.kaggle.com/cast42/santander-customer-satisfaction/exploring-features/discussion
+- var4 is bank product count: https://www.kaggle.com/cast42/santander-customer-satisfaction/exploring-features/comments#115223 (scroll down for dmi3kno's later comments)
+  - Cash products: var05, var08, var06/29, var20, var24, var14 and var13. These sum up to var30
+Credit products: var17, var44, var33. These sum up to var31
+??? products: var25, var32. These sum up to var26.
+Card products: var40, var41, var18, var34. These sum up to var01
+??? product: var37
+I may have missed one or two, but wherever you see a value in var04, be prepared for non-zero balance in a corresponding number of those fields. PS. My personal opinion, of course.
 - On the topic of translation:
   - https://www.kaggle.com/c/santander-customer-satisfaction/forums/t/19291/data-dictionary/110209#post110209
   - imp_ent_varX => importe entidad => amount for the bank office
