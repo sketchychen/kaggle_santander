@@ -1,0 +1,53 @@
+* I love your dateframe names in Input cell 2
+* I am still unsure of what the features mean after I read your column summary. I bet you are in the same boat?
+* Maybe you could sum or take the mean of each set of columns rather than worrying about individual columns.
+* No Variance columns – I largely agree with your thinking here. My only caution is that if varX represents a time period, knowing the differences in account activity over time may be helpful (even if it is 0.)  Given that there is no variance, this is almost certainly not the case, so I wouldn’t give it any more thought. 
+* Because ‘imp_ent_var16_ult1’ has values that are only positive, maybe it represents money owed to the bank by the customer (thinking credit card balances)
+* On your note about “imp_op_varX_ultY = imp_op_varX_efect_ultY + imp_op_varX_comer_ultY” is there any defining characteristic for the records that fail to match the pattern? 
+* Maybe subset your DF and see if any new columns have a variance of 0
+* when plotting line charts of features against Target 0/1, it might be helpful to add some correlation term to see demonstrate how closely related the two lines are.
+* In Out[20] it almost looks like the Target=1 distribution is A) minimized and B) shifted by -1 compared to the Target=0 distribution
+* I keep expecting to see some sort of note or summary after the output charts. How are the visualizations helping? Are they helping at all?
+* Var3 – I suggest removing the unknown categories. You have so much data to work with that retaining the 117 records shouldn’t add value to your analysis.
+* You might be able to guess at some of the country codes by comparing the distribution to the customer counts by country here: http://www.santanderannualreport.com/2014/en/annual-report/results-by-countries.html
+	* from an analytic standpoint, I am not sure the knowledge of the country adds much unless you can categorize them into economic tiers
+	* maybe subset your analysis by country
+* var36 – my best guess is that 99 means missing/unknown. I’d try to dig into the difference in values 1-3 between Target=0/1
+* var38 – does everyone have a non-zero value. Your note on avg Spain mortgages makes sense, but you may want to subset the data by Spain customers (assuming you have the country code) to make an apples to apples comparison 	
+	* Maybe it is estimated mortgage for everyone. They may have put in the avg mortgage value for respondents who have their mortgages with other banks. Can you match one of the 0/1 categorical features with respondents to have that one mortgage value?
+* Maybe you could try running an unguided Decision Tree to predict Target could help you identify the order of importance of features? Given the size of the data and the number of features, this could take a while, but might point you in the right direction.
+
+
+Here my written comments Rachel….
+
+1)	Abstract and Introduction very clear – they position me well to move forward reading.
+
+2)	Data and Data Cleanup:
+a.	Very clear approach as you prune and investigate.
+b.	Nice sleuthing and methods (sniffing out odd ducks with suspicious max and mins, duplicates)
+c.	Like your transposing for df.describe ?
+
+3)	Feature Exploration
+a.	This is where it’s hard to follow you as you explore the features in a Sherlock Holmes way.
+b.	I like your ingenuity and perspicacity in looking at various shapes and inferring through further research what the data points may represent (Age, Mortgage amounts) …. well done.
+
+4)	Modeling – just a nit that section 7 appears before section 6?
+a.	I think it makes sense to choose KNN or Logistic Regression.
+b.	But what features are you going to select?
+c.	Submission – I am unclear what your final steps are and if you have run any model on the test training data?
+
+Wow, nice and what an effort!
+My main thought here is about the importance and primacy of understanding the data and getting context around it….this is undoubtedly a lived experience for you now ? …
+It’s unfortunate that you had to spend so much time and effort not on interpreting but just deciphering (!) which, to me, hugely underscores the primacy of a good business understanding of the data, that third leg of data science.
+To me, it’s almost unconscionable, to have served the data in such fashion. Jeez, I would have gone to a local branch in Seattle and asked for help – truly!
+I would love to spend 10mn with you chatting further on this in person before or after class?….
+The point of hesitancy/uncertainty with me right now is bridging the gap in understandability between feature applicability/selection and final estimation when one is confronted with an army of potential features……Is there a model to help sort that out? ?
+\
+Talk soon - Tom
+
+
+
+
+
+
+x
